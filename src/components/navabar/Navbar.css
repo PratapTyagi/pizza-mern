@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid white;
+  margin: 0;
+}
+
+.logo > h2:hover {
+  color: rgb(245, 148, 83);
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right > .login {
+  cursor: pointer;
+  padding: 30px 10px;
+  margin: 0;
+}
+
+.right > .login:hover {
+  background-color: rgb(245, 148, 83);
+}
+
+.right > .cart {
+  cursor: pointer;
+  padding: 30px 10px;
+  margin: 0;
+}
+
+.right > .cart:hover {
+  background-color: rgb(245, 148, 83);
+}

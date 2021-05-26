@@ -5,8 +5,8 @@ import { Navbar } from "./components";
 import "./App.css";
 function App() {
   return (
-    <div className="App">
-      <h1>Pizza</h1>
+    <div className="app">
+      <Navbar />
     </div>
   );
 }
