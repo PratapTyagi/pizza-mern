@@ -1,5 +1,8 @@
+import { useSelector, useDispatch } from "react-redux";
 import "./Navbar.css";
 const Navbar = () => {
+  const { cartItems } = useSelector((state) => state.cartReducer);
+  console.log(cartItems);
   return (
     <div className="navbar">
       <div className="logo">
@@ -7,7 +10,7 @@ const Navbar = () => {
       </div>
       <div className="right">
         <h5 className="login">Login</h5>
-        <h5 className="cart">Cart 0</h5>
+        <h5 className="cart">Cart {cartItems.length}</h5>
       </div>
     </div>
   );

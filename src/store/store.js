@@ -4,9 +4,11 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { getAllPizzaReducer } from "../reducers/pizzaReducers";
+import { cartReducer } from "../reducers/cartReducer";
 
 const finalReducer = combineReducers({
   getAllPizzaReducer,
+  cartReducer,
 });
 
 const initialState = {};
