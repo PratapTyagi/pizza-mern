@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import pizzas from "../pizzasdata";
 import { Pizza } from "../components";
 
 import { getAllPizza } from "../actions/pizzaActions";
@@ -8,7 +7,10 @@ import { getAllPizza } from "../actions/pizzaActions";
 import "./Home.css";
 const Home = () => {
   const dispatch = useDispatch();
-  const [pizzas, setPizzas] = useState([]);
+
+  const pizzasState = useSelector((state) => state.getAllPizzaReducer);
+
+  const { pizzas, loading, error } = pizzasState;
 
   useEffect(() => {
     dispatch(getAllPizza());
@@ -16,9 +18,13 @@ const Home = () => {
 
   return (
     <div className="pizzas">
-      {pizzas.map((pizza) => (
-        <Pizza pizza={pizza} />
-      ))}
+      {loading ? (
+        <h1>Loading</h1>
+      ) : error ? (
+        <h1>Something went wrong</h1>
+      ) : (
+        pizzas.map((pizza) => <Pizza key={pizza._id} pizza={pizza} />)
+      )}
     </div>
   );
 };
