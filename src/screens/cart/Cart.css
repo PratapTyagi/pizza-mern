@@ -35,6 +35,23 @@
   color: grey;
 }
 
+.operations {
+  cursor: pointer;
+  color: greenyellow;
+  padding: 5px 10px;
+  margin: 3px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid greenyellow;
+  border-radius: 100%;
+}
+
+.operations:hover {
+  color: black;
+  background-color: yellowgreen;
+  transition: background-color 0.5s ease-out;
+}
+
 .cart__items > .cart__items__right > img {
   height: 100px;
   width: 100px;
@@ -57,9 +74,11 @@
   border: 1px solid red;
   color: red;
 }
+
 .cart__items__right > p:hover {
   color: whitesmoke;
   background-color: red;
+  transition: background-color 0.5s ease-out;
 }
 
 .cart__subtotal {
@@ -87,5 +106,9 @@
     font-size: small;
     padding-left: 5px;
     padding-right: 5px;
+  }
+  .operations {
+    padding: 0 3px;
+    border: none;
   }
 }
