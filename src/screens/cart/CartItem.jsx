@@ -8,7 +8,7 @@ const CartItem = ({ item, name, price, quantity, varient }) => {
       <div className="cart__items">
         <div className="cart__item__info">
           <p>
-            {name} [{varient}]
+            <strong>{name}</strong> [{varient}]
           </p>
           <p>price: ₹ {price}</p>
           <p>
