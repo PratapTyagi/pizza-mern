@@ -7,15 +7,17 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link className="link" to="/" style={{ textDecoration: "none" }}>
           <h2>вσѕтση ριzzα</h2>
         </Link>
       </div>
       <div className="right">
-        <h5 className="login">Login</h5>
+        <Link className="link" to="auth" style={{ textDecoration: "none" }}>
+          <h5 className="login">Login</h5>
+        </Link>
 
-        <Link className="cart" to="/cart" style={{ textDecoration: "none" }}>
-          <h6>Cart {cartItems.length}</h6>
+        <Link className="link" to="/cart" style={{ textDecoration: "none" }}>
+          <h6 className="cart">Cart {cartItems.length}</h6>
         </Link>
       </div>
     </div>

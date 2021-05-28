@@ -7,7 +7,7 @@
   background-color: rgb(22, 21, 21);
 }
 
-.logo > h2 {
+.logo > .link > h2 {
   color: var(--theame-color);
   cursor: pointer;
 }
@@ -17,24 +17,24 @@
   align-items: center;
 }
 
-.right > .login {
+.right > .link > .login {
   cursor: pointer;
   padding: 30px 10px;
   margin: 0;
   font-size: 15px;
 }
 
-.right > .login:hover {
+.right > .link > .login:hover {
   background-color: var(--theame-color);
 }
 
-.right > .cart {
+.right > .link > .cart {
   cursor: pointer;
   padding: 30px 10px;
   margin: 0;
   font-size: 15px;
 }
 
-.right > .cart:hover {
+.right > .link > .cart:hover {
   background-color: var(--theame-color);
 }

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, deleteFromCart } from "../../actions/cartAction";
-const CartItem = ({ item, name, price, quantity, varient }) => {
+const CartItem = ({ item, image, name, price, quantity, varient }) => {
   const dispatch = useDispatch();
 
   return (
@@ -29,10 +29,7 @@ const CartItem = ({ item, name, price, quantity, varient }) => {
           </p>
         </div>
         <div className="cart__items__right">
-          <img
-            src="https://avatars.githubusercontent.com/u/45279411?v=4"
-            alt="image"
-          />
+          <img src={image} alt="image" />
           <p onClick={() => dispatch(deleteFromCart(item))}>X</p>
         </div>
       </div>

@@ -33,6 +33,7 @@
 .cart__item__info > p {
   font-size: 12px;
   color: grey;
+  text-align: left;
 }
 
 .operations {
@@ -98,7 +99,7 @@
   border-radius: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .cart__items > .cart__items__right > img {
     display: none;
   }
