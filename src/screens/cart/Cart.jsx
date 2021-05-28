@@ -3,7 +3,9 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cartReducer);
-  console.log(cartItems, "abccccccc");
+
+  const subtotal = cartItems.reduce((x, item) => x + item.price, 0);
+
   return (
     <div className="cart">
       <div className="cart__shoppingCart">
@@ -20,7 +22,7 @@ const Cart = () => {
         ))}
       </div>
       <div className="cart__subtotal">
-        <h4>Subtotal: ₹ 333</h4>
+        <h4>Subtotal: ₹ {subtotal}</h4>
         <button>Pay Now</button>
       </div>
     </div>
