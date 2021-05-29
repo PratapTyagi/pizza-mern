@@ -1,10 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { logoutUser } from "../../actions/userActions";
 
 import "./Navbar.css";
 const Navbar = () => {
   const { cartItems } = useSelector((state) => state.cartReducer);
   const { currentUser } = useSelector((state) => state.loginUserReducer);
+
+  const dispatch = useDispatch();
   return (
     <div className="navbar">
       <div className="logo">
@@ -15,7 +18,7 @@ const Navbar = () => {
       <div className="right">
         {!currentUser ? (
           <Link className="link" to="/login" style={{ textDecoration: "none" }}>
-            <h5>Login</h5>
+            <h6>Login</h6>
           </Link>
         ) : (
           <div className="dropdown">
@@ -34,7 +37,11 @@ const Navbar = () => {
               <a className="dropdown-item" href="#">
                 Orders
               </a>
-              <a className="dropdown-item" href="#">
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => dispatch(logoutUser())}
+              >
                 Logout
               </a>
             </div>

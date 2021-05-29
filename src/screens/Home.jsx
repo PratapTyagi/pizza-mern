@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Pizza } from "../components";
+import Loading from "../components/loading/Loading";
+import Error from "../components/error/Error";
 
 import { getAllPizza } from "../actions/pizzaActions";
 
@@ -8,9 +10,9 @@ import "./Home.css";
 const Home = () => {
   const dispatch = useDispatch();
 
-  const pizzasState = useSelector((state) => state.getAllPizzaReducer);
-
-  const { pizzas, loading, error } = pizzasState;
+  const { pizzas, loading, error } = useSelector(
+    (state) => state.getAllPizzaReducer
+  );
 
   useEffect(() => {
     dispatch(getAllPizza());
@@ -19,9 +21,9 @@ const Home = () => {
   return (
     <div className="pizzas">
       {loading ? (
-        <h1>Loading</h1>
+        <Loading />
       ) : error ? (
-        <h1>Something went wrong</h1>
+        <Error error={error} />
       ) : (
         pizzas.map((pizza) => <Pizza key={pizza._id} pizza={pizza} />)
       )}
