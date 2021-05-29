@@ -17,14 +17,14 @@
   align-items: center;
 }
 
-.right > .link > .login {
+.right > .link > h5 {
   cursor: pointer;
   padding: 30px 10px;
   margin: 0;
   font-size: 15px;
 }
 
-.right > .link > .login:hover {
+.right > .link > h5:hover {
   background-color: var(--theame-color);
 }
 

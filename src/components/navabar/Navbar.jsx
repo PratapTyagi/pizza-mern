@@ -12,12 +12,8 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="right">
-        <Link
-          className="link"
-          to="/register"
-          style={{ textDecoration: "none" }}
-        >
-          <h5 className="login">Login</h5>
+        <Link className="link" to="/login" style={{ textDecoration: "none" }}>
+          <h5>Login</h5>
         </Link>
 
         <Link className="link" to="/cart" style={{ textDecoration: "none" }}>
