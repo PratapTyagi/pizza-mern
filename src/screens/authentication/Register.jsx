@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { registerUser } from "../../actions/userActions";
 
 import "./Register.css";
@@ -72,6 +73,12 @@ const Register = () => {
             Continue
           </button>
         </form>
+        <p className="login__user">
+          Already have an account
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <strong className="login__user__login"> Sign In</strong>
+          </Link>
+        </p>
       </div>
     </div>
   );

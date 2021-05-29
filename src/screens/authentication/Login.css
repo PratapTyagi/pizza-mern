@@ -24,6 +24,7 @@
   margin: 0;
   padding: 10px 10px 5px 20px;
   font-size: 13px;
+  color: gray;
 }
 
 .login__form > input {
@@ -47,6 +48,22 @@
   outline: none;
   border: none;
   border-radius: 10px;
+}
+
+.register__user {
+  padding: 20px;
+  padding-top: 0;
+  margin-left: 15px;
+  color: gray;
+}
+
+.register__user__signUp {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.register__user__signUp:hover {
+  color: yellowgreen;
 }
 
 @media screen and (max-width: 800px) {

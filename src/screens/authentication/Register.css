@@ -49,6 +49,22 @@
   border-radius: 10px;
 }
 
+.login__user {
+  padding: 20px;
+  padding-top: 0;
+  margin-left: 15px;
+  color: gray;
+}
+
+.login__user__login {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.login__user__login:hover {
+  color: yellowgreen;
+}
+
 @media screen and (max-width: 800px) {
   .register {
     width: fit-content;

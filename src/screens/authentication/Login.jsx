@@ -1,8 +1,11 @@
-import "./Login.css";
 import { useState, useEffect } from "react";
 
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../actions/userActions";
+
+import { Link } from "react-router-dom";
+
+import "./Login.css";
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -50,6 +53,12 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p className="register__user">
+          Don't have an account
+          <Link to="/register" style={{ textDecoration: "none" }}>
+            <strong className="register__user__signUp"> Sign Up</strong>
+          </Link>
+        </p>
       </div>
     </div>
   );
