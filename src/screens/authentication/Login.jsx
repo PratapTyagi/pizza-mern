@@ -1,13 +1,19 @@
 import "./Login.css";
 import { useState, useEffect } from "react";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginUser } from "../../actions/userActions";
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem("currentUser")) {
+      window.location.href = "/";
+    }
+  }, []);
 
   const login = (e) => {
     e.preventDefault();
