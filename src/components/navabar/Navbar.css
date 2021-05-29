@@ -17,14 +17,14 @@
   align-items: center;
 }
 
-.right > .link > h5 {
+.right > .link > .login {
   cursor: pointer;
   padding: 30px 10px;
   margin: 0;
   font-size: 15px;
 }
 
-.right > .link > h5:hover {
+.right > .link > .login:hover {
   background-color: var(--theame-color);
 }
 
@@ -37,4 +37,39 @@
 
 .right > .link > .cart:hover {
   background-color: var(--theame-color);
+}
+
+.dropdown-toggle {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--theame-color);
+  color: whitesmoke;
+}
+
+.dropdown-menu {
+  background-color: rgb(22, 21, 21);
+}
+
+.show > .dropdown-toggle {
+  color: var(--theame-color);
+}
+
+.show > .dropdown-toggle:hover {
+  color: whitesmoke;
+}
+
+.dropdown-menu > .dropdown-item {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: lighter;
+  border-bottom: 0.1px solid gray;
+}
+
+.dropdown-menu > .dropdown-item:hover {
+  color: black;
 }
