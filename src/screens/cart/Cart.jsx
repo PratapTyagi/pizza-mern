@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import Checkout from "../../components/checkout/Checkout";
 import "./Cart.css";
 import CartItem from "./CartItem";
 const Cart = () => {
@@ -24,7 +25,7 @@ const Cart = () => {
       </div>
       <div className="cart__subtotal">
         <h4>Subtotal: ₹ {subtotal}</h4>
-        <button>Pay Now</button>
+        <Checkout subtotal={subtotal} />
       </div>
     </div>
   );

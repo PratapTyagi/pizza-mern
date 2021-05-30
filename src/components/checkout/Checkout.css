@@ -1,0 +1,12 @@
+.btn {
+  color: white;
+  background-color: var(--theame-color);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+#modal-body {
+  color: black;
+}
