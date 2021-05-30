@@ -23,7 +23,7 @@ const Home = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <Error error={error} />
+        <Error error=" Something went wrong" />
       ) : (
         pizzas.map((pizza) => <Pizza key={pizza._id} pizza={pizza} />)
       )}

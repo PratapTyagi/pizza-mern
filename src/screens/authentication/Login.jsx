@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../actions/userActions";
+
+import Loading from "../../components/loading/Loading";
+import Error from "../../components/error/Error";
 
 import { Link } from "react-router-dom";
 
@@ -11,6 +14,11 @@ const Login = () => {
   const [password, setpassword] = useState("");
 
   const dispatch = useDispatch();
+  const loginState = useSelector((state) => state.loginUserReducer);
+
+  console.log(loginState);
+
+  const { loading, error } = loginState;
 
   useEffect(() => {
     if (localStorage.getItem("currentUser")) {
@@ -25,11 +33,15 @@ const Login = () => {
       password,
     };
     dispatch(loginUser(userDetails));
+    setemail("");
+    setpassword("");
   };
 
   return (
     <div className="login_page">
       <div className="login">
+        {loading && <Loading />}
+        {error && <Error error=" Invalid information" />}
         <h3>Login</h3>
         <form className="login__form">
           <p>Email</p>

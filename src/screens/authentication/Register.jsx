@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { registerUser } from "../../actions/userActions";
+import Error from "../../components/error/Error";
+import Success from "../../components/success/Success";
+import Loading from "../../components/loading/Loading";
 
 import "./Register.css";
 const Register = () => {
@@ -10,6 +13,11 @@ const Register = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [cpassword, setcpassword] = useState("");
+  const t = useSelector((state) => state.registerUserReducer);
+
+  const { loading, success, error } = t;
+
+  console.log(t);
 
   const dispatch = useDispatch();
 
@@ -22,7 +30,6 @@ const Register = () => {
         email,
         password,
       };
-      console.log(user);
       dispatch(registerUser(user));
     }
   };
@@ -30,6 +37,10 @@ const Register = () => {
   return (
     <div className="register_page">
       <div className="register">
+        {loading && <Loading />}
+        {success && <Success success="User Registered Successfully" />}
+        {error && <Error error="Email already registered" />}
+
         <h3>Register</h3>
         <form className="register__form">
           <p>Your name</p>
@@ -69,9 +80,7 @@ const Register = () => {
             required
           />
 
-          <button type="submit" onClick={register}>
-            Continue
-          </button>
+          <button onClick={register}>Continue</button>
         </form>
         <p className="login__user">
           Already have an account

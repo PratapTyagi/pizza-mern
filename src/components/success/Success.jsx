@@ -1,10 +1,9 @@
 import "./Success.css";
-const Success = () => {
+const Success = ({ success }) => {
+  console.log(success);
   return (
-    <div>
-      <div class="alert alert-success">
-        <strong>Success!</strong> Indicates a successful or positive action.
-      </div>
+    <div className="alert alert-success" role="alert">
+      <p>{success}</p>
     </div>
   );
 };
