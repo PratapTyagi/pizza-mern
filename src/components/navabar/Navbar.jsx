@@ -34,16 +34,16 @@ const Navbar = () => {
             </a>
 
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to="/orders">
                 Orders
-              </a>
-              <a
+              </Link>
+              <Link
                 className="dropdown-item"
                 href="#"
                 onClick={() => dispatch(logoutUser())}
               >
                 Logout
-              </a>
+              </Link>
             </div>
           </div>
         )}

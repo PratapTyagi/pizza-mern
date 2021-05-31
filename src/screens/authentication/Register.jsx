@@ -13,11 +13,9 @@ const Register = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [cpassword, setcpassword] = useState("");
-  const t = useSelector((state) => state.registerUserReducer);
+  const state = useSelector((state) => state.registerUserReducer);
 
-  const { loading, success, error } = t;
-
-  console.log(t);
+  const { loading, success, error } = state;
 
   const dispatch = useDispatch();
 

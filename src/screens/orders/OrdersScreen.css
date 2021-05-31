@@ -1,0 +1,17 @@
+.orderScreen {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderScreen > h4 {
+  border-bottom: 0.1px dotted var(--theame-color);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.orders > hr {
+  color: var(--theame-color);
+}
