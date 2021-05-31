@@ -30,13 +30,14 @@
 
 .right > .link > .cart {
   cursor: pointer;
-  padding: 30px 10px;
+  padding: 31px 10px;
   margin: 0;
   font-size: 15px;
 }
 
 .right > .link > .cart:hover {
   background-color: var(--theame-color);
+  transition: background-color 0.9s ease-out;
 }
 
 .dropdown-toggle {
@@ -48,6 +49,7 @@
 
 .dropdown-toggle:hover {
   background-color: var(--theame-color);
+  transition: background-color 0.9s ease-out;
   color: whitesmoke;
 }
 
