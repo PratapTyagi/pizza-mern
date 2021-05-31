@@ -1,0 +1,71 @@
+.filter {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(21, 20, 20);
+}
+
+.filter__inner {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.filter__inner > input {
+  padding: 10px;
+  background-color: black;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.filter__inner > select {
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.filter__inner > select > option {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.filter__inner > button {
+  border: 1px solid var(--theame-color);
+  color: var(--theame-color);
+  background-color: inherit;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.filter__inner > button:hover {
+  border: 1px solid var(--theame-color);
+  background-color: var(--theame-color);
+  transition: background-color 0.9s ease-out;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 700px) {
+  .filter {
+    width: 70%;
+    margin: 0 10%;
+  }
+
+  .filter__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .filter__inner > select {
+    margin-top: 10px;
+  }
+  .filter__inner > button {
+    margin-top: 10px;
+    width: 92%;
+  }
+}

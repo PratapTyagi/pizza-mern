@@ -7,6 +7,7 @@ import Error from "../components/error/Error";
 import { getAllPizza } from "../actions/pizzaActions";
 
 import "./Home.css";
+import Filter from "../components/filter/Filter";
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -19,15 +20,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="pizzas">
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <Error error=" Something went wrong" />
-      ) : (
-        pizzas.map((pizza) => <Pizza key={pizza._id} pizza={pizza} />)
-      )}
-    </div>
+    <>
+      <Filter />
+      <div className="pizzas">
+        {loading ? (
+          <Loading />
+        ) : error ? (
+          <Error error=" Something went wrong" />
+        ) : (
+          pizzas.map((pizza) => <Pizza key={pizza._id} pizza={pizza} />)
+        )}
+      </div>
+    </>
   );
 };
 
