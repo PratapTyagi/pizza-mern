@@ -1,0 +1,32 @@
+.admin {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.admin > h4 {
+  border-bottom: 1px solid var(--theame-color);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.admin > .admin__nav > .admin__nav__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(21, 20, 20);
+}
+
+.admin__nav > .admin__nav__inner > .admin__nav__inner__link > p {
+  padding: 12px;
+  margin: 0;
+}
+
+.admin__nav > .admin__nav__inner > .admin__nav__inner__link > p:hover {
+  background-color: var(--theame-color);
+  transition: background-color 0.9s ease-out;
+}
+
+.admin__nav > .admin__nav__routes {
+  display: flex;
+  flex-direction: column;
+}
