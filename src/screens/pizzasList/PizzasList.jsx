@@ -47,7 +47,7 @@ const PizzasList = () => {
                   <td>{pizza.category}</td>
                   <td>
                     <i className="bi bi-trash"></i>
-                    <i class="bi bi-pencil-square"></i>
+                    <i className="bi bi-pencil-square"></i>
                   </td>
                 </tr>
               );

@@ -1,0 +1,59 @@
+.addNewPizza {
+  margin-top: 2%;
+}
+
+.addNewPizza__inner {
+  border-radius: 20px;
+  background-color: rgb(21, 20, 20);
+  margin: 20px auto;
+  width: 35%;
+  text-align: left;
+}
+
+.addNewPizza__inner > h5 {
+  padding: 20px 0 0 30px;
+}
+
+.addNewPizza__form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 10px;
+}
+
+.addNewPizza__form > p {
+  margin: 0;
+  padding: 10px 10px 5px 22px;
+  font-size: 13px;
+}
+
+.addNewPizza__form > input {
+  width: 85%;
+  margin-left: 20px;
+  padding: 10px;
+  font-weight: 2px;
+  outline: none;
+  border: none;
+  color: grey;
+  background-color: black;
+}
+
+.addNewPizza__form > .addNewPizza__form__link > button {
+  width: 85%;
+  margin: 20px 0 20px 20px;
+  padding: 10px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: var(--theame-color);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .addNewPizza__inner {
+    width: fit-content;
+  }
+  .addNewPizza__form {
+    padding: 10px 10px 0 10px;
+  }
+}
