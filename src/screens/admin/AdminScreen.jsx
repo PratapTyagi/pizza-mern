@@ -54,10 +54,11 @@ const AdminScreen = () => {
         </div>
         <div className="admin__nav__routes">
           <Switch>
-            <Route path="/admin/userslist" component={UsersList} />
-            <Route path="/admin/pizzaslist" component={PizzasList} />
-            <Route path="/admin/addnewpizza" component={AddNewPizza} />
-            <Route path="/admin/orderslist" component={OrdersList} />
+            <Route path="/admin" exact component={UsersList} />
+            <Route path="/admin/userslist" exact component={UsersList} />
+            <Route path="/admin/pizzaslist" exact component={PizzasList} />
+            <Route path="/admin/addnewpizza" exact component={AddNewPizza} />
+            <Route path="/admin/orderslist" exact component={OrdersList} />
           </Switch>
         </div>
       </div>

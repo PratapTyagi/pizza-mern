@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Pizza } from "../components";
 import Loading from "../components/loading/Loading";
 import Error from "../components/error/Error";
+import Filter from "../components/filter/Filter";
 
 import { getAllPizza } from "../actions/pizzaActions";
 
 import "./Home.css";
-import Filter from "../components/filter/Filter";
 const Home = () => {
   const dispatch = useDispatch();
 

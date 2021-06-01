@@ -1,0 +1,50 @@
+.pizzasList > h5 {
+  padding: 20px;
+}
+
+.table {
+  background-color: rgb(21, 20, 20);
+  border: 1px solid gray;
+}
+
+thead > tr > th {
+  color: var(--theame-color);
+}
+
+td,
+th,
+tr {
+  text-align: left;
+  font-size: 14px;
+}
+
+td,
+tr {
+  font-size: 10px;
+  color: lightgrey;
+}
+
+.bi-trash {
+  color: red;
+  cursor: pointer;
+  padding: 3px 4px;
+  border-radius: 100%;
+  border: 1px solid red;
+  margin: 5px;
+}
+
+.bi-trash:hover {
+  color: whitesmoke;
+  background-color: red;
+}
+
+.bi-pencil-square {
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: yellowgreen;
+}
+
+.bi-pencil-square:hover {
+  border-bottom: 1px solid yellowgreen;
+}
