@@ -51,3 +51,15 @@ export const getPizzaById = (pizzaid) => async (dispatch) => {
     dispatch({ type: "GET_PIZZABYID_FAILED", payload: error });
   }
 };
+
+export const editPizzaAction = (editedpizza) => async (dispatch) => {
+  dispatch({ type: "EDIT_PIZZA_REQUEST" });
+
+  try {
+    const res = await axios.post("/api/pizzas/editpizza", { editedpizza });
+    dispatch({ type: "EDIT_PIZZA_SUCCESS" });
+    window.location.href = "/admin/pizzaslist";
+  } catch (error) {
+    dispatch({ type: "EDIT_PIZZA_FAILED", payload: error });
+  }
+};
