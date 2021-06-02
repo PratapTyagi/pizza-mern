@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Loading from "../../components/loading/Loading";
 import Error from "../../components/error/Error";
 
-import { getAllPizza } from "../../actions/pizzaActions";
+import { deletePizzaAction, getAllPizza } from "../../actions/pizzaActions";
 
 import "./PizzasList.css";
 const PizzasList = () => {
@@ -46,7 +46,10 @@ const PizzasList = () => {
                   </td>
                   <td>{pizza.category}</td>
                   <td>
-                    <i className="bi bi-trash"></i>
+                    <i
+                      className="bi bi-trash"
+                      onClick={() => dispatch(deletePizzaAction(pizza._id))}
+                    ></i>
                     <Link to={`/admin/editpizza/${pizza._id}`}>
                       <i className="bi bi-pencil-square"></i>
                     </Link>
