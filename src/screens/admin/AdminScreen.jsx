@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import OrdersList from "../ordersList/OrdersList";
 import PizzasList from "../pizzasList/PizzasList";
 import AddNewPizza from "../addNewPizza/AddNewPizza";
+import EditPizzaAdmin from "../editPizzaAdmin/EditPizzaAdmin";
 import UsersList from "../usersList/UsersList";
 
 import "./AdminScreen.css";
@@ -59,6 +60,11 @@ const AdminScreen = () => {
             <Route path="/admin/pizzaslist" exact component={PizzasList} />
             <Route path="/admin/addnewpizza" exact component={AddNewPizza} />
             <Route path="/admin/orderslist" exact component={OrdersList} />
+            <Route
+              path="/admin/editpizza/:pizzaid"
+              exact
+              component={EditPizzaAdmin}
+            />
           </Switch>
         </div>
       </div>

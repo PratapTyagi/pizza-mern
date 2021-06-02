@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import Loading from "../../components/loading/Loading";
 import Error from "../../components/error/Error";
-import Filter from "../../components/filter/Filter";
 
 import { getAllPizza } from "../../actions/pizzaActions";
 
@@ -37,7 +37,7 @@ const PizzasList = () => {
           {pizzas &&
             pizzas.map((pizza) => {
               return (
-                <tr>
+                <tr key={pizza._id}>
                   <td>{pizza.name}</td>
                   <td>
                     Small: {pizza.prices[0]["small"]} <br />
@@ -47,7 +47,9 @@ const PizzasList = () => {
                   <td>{pizza.category}</td>
                   <td>
                     <i className="bi bi-trash"></i>
-                    <i className="bi bi-pencil-square"></i>
+                    <Link to={`/admin/editpizza/${pizza._id}`}>
+                      <i className="bi bi-pencil-square"></i>
+                    </Link>
                   </td>
                 </tr>
               );
