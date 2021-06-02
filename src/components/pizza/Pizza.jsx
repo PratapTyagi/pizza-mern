@@ -17,6 +17,8 @@ const Pizza = ({ pizza }) => {
 
   const addtoCart = () => dispatch(addToCart(pizza, quantity, varient));
 
+  console.log(pizza.name === "Pizza Margherita" && pizza);
+
   return (
     <div className="pizza">
       <h1>{pizza.name}</h1>

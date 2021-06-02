@@ -12,11 +12,13 @@
 .pizza > h1 {
   font-size: 20px;
   height: 50px;
-  padding: 10px 0;
+  text-transform: uppercase;
+  padding: 7px 0 12px 0;
+  margin-bottom: 10px;
 }
 
 .pizza__image {
-  height: 280px;
+  min-height: 280px;
   width: 300px;
   cursor: pointer;
 }
