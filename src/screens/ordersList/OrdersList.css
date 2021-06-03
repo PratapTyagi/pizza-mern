@@ -1,0 +1,50 @@
+.ordersList > h5 {
+  padding: 20px;
+}
+
+.table {
+  background-color: rgb(21, 20, 20);
+  border: 1px solid gray;
+}
+
+thead > tr > th {
+  color: var(--theame-color);
+}
+
+td,
+th,
+tr {
+  text-align: left;
+  font-size: 14px;
+}
+
+td,
+tr {
+  font-size: 10px;
+  color: lightgrey;
+}
+
+td > button {
+  color: white;
+  background-color: red;
+  outline: none;
+  border: none;
+  margin: 0;
+  text-align: center;
+  padding-right: 2px;
+  margin-left: 10px;
+}
+
+td > h6 {
+  font-size: 10px;
+  color: greenyellow;
+  padding-top: 2px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+td > button:hover {
+  color: red;
+  background-color: inherit;
+  transition: background-color 0.9s ease-in-out;
+}
