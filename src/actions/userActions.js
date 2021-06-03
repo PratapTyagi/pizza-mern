@@ -39,3 +39,14 @@ export const getAllUsers = () => async (dispatch) => {
     dispatch({ type: "GET_USERS_FAILED", payload: error });
   }
 };
+
+export const deleteUser = (userid) => async (dispatch) => {
+  try {
+    await axios.post("/api/users/deleteuser", { userid });
+    alert("User Deleted successfully");
+    window.location.reload();
+  } catch (error) {
+    alert(`Something went wrong`);
+    console.log(error);
+  }
+};

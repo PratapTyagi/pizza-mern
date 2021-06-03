@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllUsers } from "../../actions/userActions";
+import { getAllUsers, deleteUser } from "../../actions/userActions";
 
 import Loading from "../../components/loading/Loading";
 import Error from "../../components/error/Error";
@@ -38,7 +38,14 @@ const UsersList = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
-                    <i className="bi bi-trash"></i>
+                    {!user.isAdmin ? (
+                      <i
+                        className="bi bi-trash"
+                        onClick={() => dispatch(deleteUser(user._id))}
+                      ></i>
+                    ) : (
+                      <h6>Admin</h6>
+                    )}
                   </td>
                 </tr>
               );
