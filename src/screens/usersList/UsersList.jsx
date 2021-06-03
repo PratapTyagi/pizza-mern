@@ -16,11 +16,11 @@ const UsersList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="usersList">
       <h5>Users List</h5>
       {loading && <Loading />}
       {error && <Error error=" Something went wrong" />}
-      <table className="table table-bordered table-striped">
+      <table className="table table-bordered">
         <thead>
           <tr>
             <th>User Id</th>
